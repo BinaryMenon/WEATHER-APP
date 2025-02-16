@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #e0f7fa 50%, #80deea 50%);
+    font-family: 'Arial', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Added for consistent box-sizing */
+}
+
+main {
+    width: 320px;
+    height: max-content;
+    min-height: 320px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    transition: transform 0.2s; /* Added transition for hover effect */
+}
+
+main:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+main form {
+    border: 1px solid #b2ebf2;
+    display: flex;
+    border-radius: 20px;
+    justify-content: space-between;
+    padding: 10px; /* Added padding for better spacing */
+}
+
+main form input, 
+main form button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 10px;
+    transition: background-color 0.3s; /* Added transition for background color */
+}
+
+main form input:hover, 
+main form button:hover {
+    background-color: #e0f7fa; /* Light background on hover */
+}
+
+main form i {
+    opacity: 0.8;
+}
+
+main .result {
+    padding-top: 20px;
+    text-align: center;
+}
+
+main .result .name {
+    font-weight: bold;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+main .temperature img {
+    width: 150px;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
+
+main .temperature figcaption {
+    font-size: 3em;
+    color: #00796b;
+}
+
+main .description {
+    padding: 10px 0 30px;
+    color: #555;
+}
+
+main ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+main li {
+    background-color: #ffab40;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px 10px;
+    background-image: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 50%);
+    font-weight: bold;
+    font-size: small;
+    transition: background-color 0.3s, transform 0.2s; /* Added transition for hover effects */
+}
+
+main ul li:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+main ul li i {
+    font-size: 2em;
+    margin: 20px 0;
+    display: block !important;
+}
+
+main li:nth-child(2) {
+    background-color: #ff6f61;
+}
+
+main li:nth-child(3) {
+    background-color: #4db6ac;
+}
+
+main.error {
+    animation: errorEffect 0.3s linear 1;
+}
+
+@keyframes errorEffect {
+    0% {
+        transform: translate(10px, 5px);
+    }
+    25% {
+        transform: translate(-5px, 0);
+    }
+    50% {
+        transform: translate(8px, 2px);
+    }
+    75% {
+        transform: translate(-2px, 5px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
